@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bad phone number</title>
+    </head>
+    <style>
+        .number{
+            height: 40px;
+            width: 40px;
+        }
+
+        #slider{
+            width: 1300px;
+        }
+
+        #button1{
+            width: 100px;
+            height: 50px;
+        }
+    </style>
+    <body>
+        <h1>Bad phone numbers</h1>
+        <p>Pleas type in your number</p>
+
+        <div id="phoneNumber1">
+            <p>Phone number</p>
+            <input class="number" id="number1" type="number">
+            <input class="number" id="number1" type="number">
+            <input class="number" id="number1" type="number">
+            <input class="number" id="number1" type="number">
+            <input class="number" id="number1" type="number">
+            <input class="number" id="number1" type="number">
+            <input class="number" id="number1" type="number">
+            <input class="number" id="number1" type="number">
+            <button id="button1">Send inn</button>
+        </div>
+        <br>
+        <div>
+            <br>
+        </div>
+        <br>
+        <div>
+            <br>
+        </div>
+
+        <div id="phoneNumber2">
+            <input id="slider" type="range" min="0" max="99999999">
+            <p>Ditt telefon nummer er: <p id="output"></p></p>
+        </div>
+
+        <script>
+            var slider = document.getElementById("slider");
+            var output = document.getElementById("output")
+
+            output.innerHTML = slider.value;
+
+            slider.oninput = function() {
+            output.innerHTML = this.value;
+            }
+
+            var button = document.getElementById("button");
+            button.addEventListener("click", show);
+
+            function show() {
+                number1 = document.getElementById("number1").value; // Get the value of number1 here
+                alert(number1);
+            }
+
+                
+            
+
+
+        </script>
+    </body>
+</html>
